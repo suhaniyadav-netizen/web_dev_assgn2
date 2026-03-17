@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #1f2a6b;
+    min-height: 100vh;
+    padding: 22px 40px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 18px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.top-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.weatherForm,
+.info,
+.console {
+    background: #f5f5f5;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.weatherForm h3,
+.info h3,
+.console h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+#form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+#city {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid #cdd8e1;
+    border-radius: 3px;
+    outline: none;
+    font-size: 13px;
+}
+
+#search {
+    background: #f47c30;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.historyBtn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.historyBtn button {
+    background: #f47c30;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    padding: 5px 10px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.info {
+    min-height: 126px;
+}
+
+#weatherContent {
+    margin-top: 4px;
+}
+
+#weatherContent p {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0;
+    border-bottom: 1px solid #e3e3e3;
+    font-size: 13px;
+    color: #333;
+}
+
+#weatherContent p:last-child {
+    border-bottom: none;
+}
+
+.console {
+    padding-bottom: 10px;
+}
+
+.console-box {
+    background: #101a63;
+    min-height: 34px;
+    border-radius: 3px;
+    padding: 8px 10px;
+    color: white;
+    font-size: 12px;
+    font-family: monospace;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .top-section {
+        grid-template-columns: 1fr;
+    }
+
+    #form {
+        flex-direction: column;
+    }
+
+    #search {
+        width: 100%;
+    }
+}
