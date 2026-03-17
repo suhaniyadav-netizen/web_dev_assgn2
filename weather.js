@@ -39,4 +39,26 @@ form.addEventListener('submit',async function(event){
 
 
 function displayHistory(){
+    searchHistory.innerHTML=""
+
+    const history = JSON.parse(localStorage.getItem("cityHistory"))
+    console.log(history)
+
+    if(history){
+        history.forEach((city)=>{
+            const btn = document.createElement("button")
+
+            btn.innerText = city
+
+            btn.addEventListener("click", function(){
+                getData(city)
+            })
+
+            searchHistory.appendChild(btn)
+        })
+    }
+}
+
+displayHistory()
+
 
